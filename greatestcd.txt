@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class GreatestCD{
+	public static void main(String[] arg){
+		Scanner in = new Scanner(System.in);
+		System.out.println("enter first num :");
+		int x = in.nextInt();
+		System.out.println("enter second num :");
+		int y = in.nextInt();
+		int z = gcd( x , y );
+	        System.out.println("gcd = " + z);			
+            }
+public static int gcd(int num1, int num2){
+	int a = num1 , b = num2 ;
+        int gcdivisor = 1;
+	for(int i =2; i <= a && i <= b; i++){
+ 	if(num1 % i == 0 && num2 % i == 0)
+	 	gcdivisor = i;
+             }
+         return(gcdivisor);
+       }
+}
